@@ -1,14 +1,11 @@
-const RecognitionService = () => { 
-  
-  const compareFaces = () => {};
-  const uploadImageToS3 = () => {};
-  const getListImageS3 = () => {};
+import { compareFacesAsync } from "./compareFaces.service";
+import { getListImageBucketS3 } from "./getListImageBucketS3.service";
+import { uploadImageToS3 } from "./uploadImageToS3.service";
 
-  return  {
-    compareFaces,
-    uploadImageToS3,
-    getListImageS3
-  }
+const RecognitionService = {
+  compareFacesAsync,
+  uploadImageToS3,
+  getListImageBucketS3
 }
 
 export { RecognitionService }

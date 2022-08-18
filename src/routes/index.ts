@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { compareFaces } from '../controllers/recognition/compareFaces';
-import { home } from '../controllers/recognition/home';
-import { uploadImageToS3 } from '../controllers/recognition/uploadImageToS3';
-import { getAllUsers, insertUser } from '../controllers/users/users';
+import { compareFaces } from '../controllers/recognitionController/compareFaces';
+import { getListImageBucketS3 } from '../controllers/recognitionController/getListImageBucketS3';
+import { uploadImageToS3 } from '../controllers/recognitionController/uploadImageToS3';
+import { getAllUsers, insertUser } from '../controllers/usersController/users';
 
 const routes = Router();
 
-routes.get('/', home);
+routes.get('/', getListImageBucketS3);
 
 // AWS
 routes.get('/compareFaces', compareFaces);

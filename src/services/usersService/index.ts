@@ -1,12 +1,9 @@
-import { User } from "../../models/users";
-import { QueryToAsync } from "../../utils/queryToPromise";
+import { getAllUsersQuery, insertUserQuery } from "./users.service"
 
-async function getAllUsersQuery(): Promise<User[]> {
-  return QueryToAsync<User[]>('select * from Users', null);
+const UserService = { 
+  getAllUsersQuery,
+  insertUserQuery
 }
 
-async function insertUserQuery(users: User): Promise<User[]> {
-  return QueryToAsync<User[]>('INSERT INTO Users(id,name,email) VALUES (?,?,?);', [...Object.values(users)]);
-}
+export { UserService }
 
-export { getAllUsersQuery, insertUserQuery }
