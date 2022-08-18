@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { compareFaces } from '../controllers/compareFaces';
-import { home } from '../controllers/home';
-import { uploadImageToS3 } from '../controllers/uploadImageToS3';
-import { getAllUsers, insertUser } from '../controllers/users';
+import { compareFaces } from '../controllers/recognition/compareFaces';
+import { home } from '../controllers/recognition/home';
+import { uploadImageToS3 } from '../controllers/recognition/uploadImageToS3';
+import { getAllUsers, insertUser } from '../controllers/users/users';
 
 const routes = Router();
 
